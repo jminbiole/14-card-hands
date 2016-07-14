@@ -9,10 +9,19 @@ export default class App {
 
   }
   getOptions() {
-      return getOptionData()
+      return getOptionsData()
         .then((data) => {
           this.data = data;
         });
   }
+  render(data){
+    // this.element.querySelector('.row').innerHTML = '';
 
+    this.data.forEach((singleOptionData) => {
+      const hand = new getHand(singleOptionData);
+      optionItem.render();
+
+      this.element.querySelector('.row').appendChild(getOptionsData.element);
+    });
+  }
 }
