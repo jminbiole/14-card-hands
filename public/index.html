@@ -35,10 +35,7 @@
               <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
               <p class="row-item__text">Value</p>
           </div>
-          <div class="row-item">
-              <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-              <p class="row-item__text">Value</p>
-          </div>
+
 
         </div>
         <div class="row">
@@ -149,6 +146,14 @@
   <script src="/app.js" charset="utf-8"></script>
 
   <script type="text/javascript">
+    var App = require('app');
+    var appEl = document.querySelector('row');
+    var appyMcAppface = new App(appEl);
+
+    appyMcAppface.getOptions()
+    .then(function() {
+        appyMcAppface.render();
+      });
   </script>
 </body>
 
