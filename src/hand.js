@@ -1,10 +1,10 @@
 const template = `
 <div class="row-item">
-    <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
+    <img class="row-item__pic" src="" alt="">
     <p class="row-item__text"></p>
 </div>`;
 
-export default class GetHand {
+export default class Hand {
   constructor(data) {
     this.data = data;
 
@@ -17,7 +17,8 @@ export default class GetHand {
     };
   }
   render() {
-  this.selectors.pic.innerText = this.data.pic;
-  this.selectors.text.innerText = this.data.text;
-}
+    console.log(this.data)
+    this.selectors.pic.src = this.data.pic;
+    this.selectors.text.innerText = this.data.text;
+  }
 }

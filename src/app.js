@@ -1,27 +1,33 @@
 'use strict';
 import parseJson from 'parse-json';
-import getOptionsData from 'get-options-data';
-import GetHand from 'get-hand';
+import Hand from 'hand';
 
 export default class App {
   constructor(element) {
     this.element = element;
 
+    this.data = [];
   }
-  getOptions() {
-      return getOptionsData()
-        .then((data) => {
-          this.data = data;
-        });
+  getOptionsData() {
+    return fetch('https://card-proxy.herokuapp.com/decks/new')
+      .then(parseJson)
+      .then((data) => {
+        this.data = data;
+      });
   }
-  render(data){
-    // this.element.querySelector('.row').innerHTML = '';
+  render() {
+    for (var i = 0; i <= 3; i++) {
+      const hand = new Hand(this.data.deck_id);
 
-    this.data.forEach((singleOptionData) => {
-      const hand = new getHand(singleOptionData);
-      optionItem.render();
-
-      this.element.querySelector('.row').appendChild(getOptionsData.element);
-    });
+      this.element.appendChild(hand.element);
+      hand.render();
+    }
+      // this.element = document.querySelector('.row').innerHTML = '';
+      // // this.data.forEach((data) => {
+      // //   const hand = new Hand(deck_id);
+      // //   hand.render();
+      // //
+      // //   this.element.querySelector('.row').appendChild(hand.element);
+      // // });
   }
 }
