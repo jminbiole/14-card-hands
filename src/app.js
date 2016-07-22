@@ -1,33 +1,29 @@
 'use strict';
-import parseJson from 'parse-json';
 import Hand from 'hand';
 
 export default class App {
   constructor(element) {
     this.element = element;
-
     this.data = [];
   }
-  getOptionsData() {
+  start() {
     return fetch('https://card-proxy.herokuapp.com/decks/new')
-      .then(parseJson)
-      .then((data) => {
-        this.data = data;
-      });
+      .then((res) => res.json()
+        .then((data) => {
+          this.data = data;
+          console.log(data);
+        }))
   }
   render() {
-    for (var i = 0; i <= 3; i++) {
-      const hand = new Hand(this.data.deck_id);
+    this.element.innerHTML = '';
 
+    for (var i = 0; i <= 5; i++) {
+      const hand = new Hand(this.data.deck_id);
       this.element.appendChild(hand.element);
-      hand.render();
+
+      hand.draw().then(() => {
+        hand.render();
+      });
     }
-      // this.element = document.querySelector('.row').innerHTML = '';
-      // // this.data.forEach((data) => {
-      // //   const hand = new Hand(deck_id);
-      // //   hand.render();
-      // //
-      // //   this.element.querySelector('.row').appendChild(hand.element);
-      // // });
   }
 }

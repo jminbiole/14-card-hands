@@ -39,100 +39,6 @@
             <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
             <p class="row-item__text">Value</p>
           </div>
-
-
-        </div>
-        <div class="row">
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-
         </div>
       </div>
     </main>
@@ -151,12 +57,11 @@
 
   <script type="text/javascript">
     var App = require('app');
-    var appEl = document.querySelector('#app');
-    var deck = new App(appEl);
-    deck.getOptionsData()
-      .then(function() {
-        deck.render();
-      });
+    var argu = document.querySelector('#app');
+    var game = new App(argu);
+    game.start().then(() => {
+      game.render();
+    });
   </script>
 </body>
 
