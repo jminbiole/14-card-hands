@@ -18,28 +18,6 @@
 
     <main class="app__main">
       <div class="container" id="app">
-        <div class="row">
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-          <div class="row-item">
-            <img class="row-item__pic" src="http://www.placecage.com/c/200/300" alt="">
-            <p class="row-item__text">Value</p>
-          </div>
-        </div>
       </div>
     </main>
 
@@ -56,12 +34,10 @@
   <script src="/app.js" charset="utf-8"></script>
 
   <script type="text/javascript">
-    var App = require('app');
     var argu = document.querySelector('#app');
+    var App = require('app');
     var game = new App(argu);
-    game.start().then(() => {
-      game.render();
-    });
+    game.start();
   </script>
 </body>
 
