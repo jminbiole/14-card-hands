@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>14-card-hands</title>
   <link rel="stylesheet" href="/app.css">
 </head>
+
 <body>
+
+  <div class="app">
+    <nav class="app__nav">
+      <div class="container">
+        <h1 class="nav-title">Card Hands</h1>
+      </div>
+    </nav>
+
+    <main class="app__main">
+      <div class="container" id="app">
+      </div>
+    </main>
+
+    <footer class="app__footer">
+      <div class="container">
+        <div class="footer-content">
+          <h2 class="nav-title">This is a footer. I don't know if it needs to be here, but it is. And I changed this to save and push.</h2>
+        </div>
+      </div>
+    </footer>
+  </div>
 
   <script src="/vendor.js" charset="utf-8"></script>
   <script src="/app.js" charset="utf-8"></script>
 
   <script type="text/javascript">
+    var argu = document.querySelector('#app');
+    var App = require('app');
+    var game = new App(argu);
+    game.start();
   </script>
 </body>
+
 </html>
